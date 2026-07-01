@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { Phone, Mail, ArrowUpRight } from 'lucide-react';
 
 const CTA = () => {
@@ -26,7 +25,7 @@ const CTA = () => {
       <meta itemProp="name" content="MME Event Management LLC" />
       <meta itemProp="description" content="Dubai's premier luxury event management company specializing in corporate events, product launches, exhibition stand design, audio visual production, and award ceremonies across the UAE." />
       <meta itemProp="url" content="https://www.mmeevents.ae" />
-      <meta itemProp="telephone" content="+971-50-123-4567" />
+      <meta itemProp="telephone" content="+971-55-735-4031" />
       <meta itemProp="address" content="Dubai, United Arab Emirates" />
       <meta itemProp="areaServed" content="Dubai, UAE, Middle East" />
       <meta itemProp="priceRange" content="$$$" />
@@ -100,30 +99,30 @@ const CTA = () => {
         >
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link
-              to="/contact"
-              className="group relative px-10 py-5 bg-luxury-gold text-[#050505] rounded-full overflow-hidden font-display font-bold text-base uppercase tracking-wider inline-flex items-center gap-3"
+            <button
+              type="button"
+              disabled
+              className="group relative px-10 py-5 bg-luxury-gold/60 text-[#050505] rounded-full overflow-hidden font-display font-bold text-base uppercase tracking-wider inline-flex items-center gap-3 cursor-not-allowed"
               aria-label="Book a Consultation with MME Event Management Dubai"
             >
               <span className="relative z-10">Book Consultation</span>
-              <ArrowUpRight size={18} className="relative z-10 group-hover:rotate-45 transition-transform duration-300" />
-              <div className="absolute inset-0 bg-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] z-0" />
-            </Link>
+              <ArrowUpRight size={18} className="relative z-10" />
+            </button>
 
-            <Link
-              to="/contact"
-              className="group px-10 py-5 border border-white/20 text-white rounded-full font-display font-bold text-base uppercase tracking-wider hover:border-luxury-gold hover:text-luxury-gold transition-all duration-300 inline-flex items-center gap-3"
+            <button
+              type="button"
+              disabled
+              className="group px-10 py-5 border border-white/20 text-white/50 rounded-full font-display font-bold text-base uppercase tracking-wider inline-flex items-center gap-3 cursor-not-allowed"
               aria-label="Request a Proposal from MME Event Management"
             >
               Request Proposal
-              <ArrowUpRight size={18} className="group-hover:rotate-45 transition-transform duration-300" />
-            </Link>
+              <ArrowUpRight size={18} />
+            </button>
           </div>
 
           {/* Contact Info — inline, editorial style */}
           <div className="flex flex-col sm:flex-row gap-8 lg:gap-12 text-right">
-            <a
-              href="tel:+971501234567"
+            <div
               className="group flex flex-col items-start sm:items-end gap-1"
               aria-label="Call MME Event Management Dubai"
               itemProp="telephone"
@@ -131,13 +130,12 @@ const CTA = () => {
               <span className="text-[#555] text-[10px] uppercase tracking-[0.25em] font-semibold flex items-center gap-2">
                 <Phone size={10} /> Call Us
               </span>
-              <span className="text-white text-sm font-medium group-hover:text-luxury-gold transition-colors duration-300">
-                +971 50 123 4567
+              <span className="text-white text-sm font-medium">
+                +971 55 735 4031
               </span>
-            </a>
+            </div>
 
-            <a
-              href="mailto:info@mmeevents.ae"
+            <div
               className="group flex flex-col items-start sm:items-end gap-1"
               aria-label="Email MME Event Management"
               itemProp="email"
@@ -145,10 +143,10 @@ const CTA = () => {
               <span className="text-[#555] text-[10px] uppercase tracking-[0.25em] font-semibold flex items-center gap-2">
                 <Mail size={10} /> Email Us
               </span>
-              <span className="text-white text-sm font-medium group-hover:text-luxury-gold transition-colors duration-300">
-                info@mmeevents.ae
+              <span className="text-white text-sm font-medium">
+                info@mmeeventmanagement.com
               </span>
-            </a>
+            </div>
           </div>
         </motion.div>
 

@@ -144,8 +144,9 @@ const Testimonials = () => {
                 {testimonials.map((_, i) => (
                   <button
                     key={i}
-                    onClick={() => setActive(i)}
-                    className={`rounded-full transition-all duration-500 ${i === active ? 'w-8 h-1.5 bg-luxury-gold' : 'w-1.5 h-1.5 bg-white/20 hover:bg-white/40'}`}
+                    type="button"
+                    disabled
+                    className={`rounded-full cursor-not-allowed ${i === active ? 'w-8 h-1.5 bg-luxury-gold/70' : 'w-1.5 h-1.5 bg-white/20'}`}
                   />
                 ))}
               </div>
@@ -158,10 +159,10 @@ const Testimonials = () => {
             <button
               key={t.name}
               type="button"
-              onClick={() => setActive(i)}
+              disabled
               className={`w-full border px-4 py-4 text-left transition-colors ${
                 i === active ? 'border-luxury-gold/50 bg-luxury-gold/10' : 'border-white/10 bg-white/[0.02]'
-              }`}
+              } cursor-not-allowed`}
             >
               <p className="text-white text-sm leading-relaxed mb-3">{t.quote}</p>
               <p className="text-luxury-gold text-xs uppercase tracking-[0.16em] font-bold">{t.name}</p>
@@ -175,9 +176,9 @@ const Testimonials = () => {
       <div className="relative overflow-hidden mb-4 hidden md:block">
         <div ref={marqueeRef1} className="flex gap-8 w-max">
           {row1.map((t, i) => (
-            <div key={i} className="shrink-0 border-l border-white/10 pl-8 pr-16 py-3 cursor-pointer group" onClick={() => setActive(i % testimonials.length)}>
-              <p className="text-[#555] text-sm font-light max-w-[280px] leading-relaxed group-hover:text-white transition-colors duration-300 truncate">{t.quote.slice(0, 60)}...</p>
-              <p className="text-luxury-gold/60 text-xs mt-2 uppercase tracking-wider font-bold group-hover:text-luxury-gold transition-colors">{t.name}</p>
+            <div key={i} className="shrink-0 border-l border-white/10 pl-8 pr-16 py-3 cursor-default">
+              <p className="text-[#555] text-sm font-light max-w-[280px] leading-relaxed truncate">{t.quote.slice(0, 60)}...</p>
+              <p className="text-luxury-gold/60 text-xs mt-2 uppercase tracking-wider font-bold">{t.name}</p>
             </div>
           ))}
         </div>
@@ -187,9 +188,9 @@ const Testimonials = () => {
       <div className="relative overflow-hidden hidden md:block">
         <div ref={marqueeRef2} className="flex gap-8 w-max">
           {row2.map((t, i) => (
-            <div key={i} className="shrink-0 border-r border-white/10 pr-8 pl-16 py-3 cursor-pointer group" onClick={() => setActive(i % testimonials.length)}>
-              <p className="text-[#444] text-sm font-light max-w-[280px] leading-relaxed group-hover:text-white transition-colors duration-300 truncate">{t.quote.slice(0, 60)}...</p>
-              <p className="text-luxury-gold/50 text-xs mt-2 uppercase tracking-wider font-bold group-hover:text-luxury-gold transition-colors">{t.name}</p>
+            <div key={i} className="shrink-0 border-r border-white/10 pr-8 pl-16 py-3 cursor-default">
+              <p className="text-[#444] text-sm font-light max-w-[280px] leading-relaxed truncate">{t.quote.slice(0, 60)}...</p>
+              <p className="text-luxury-gold/50 text-xs mt-2 uppercase tracking-wider font-bold">{t.name}</p>
             </div>
           ))}
         </div>

@@ -67,10 +67,10 @@ const AboutHero = () => {
             transition={{ duration: 1, delay: 0.6, ease: "easeOut" }}
             className="flex flex-col sm:flex-row gap-4 mt-4"
           >
-            <button className="px-8 py-4 bg-[#C6A86A] text-[#0A0A0A] font-semibold tracking-wide rounded-sm hover:bg-white transition-colors duration-300">
+            <button type="button" disabled className="px-8 py-4 bg-[#C6A86A]/60 text-[#0A0A0A] font-semibold tracking-wide rounded-sm cursor-not-allowed">
               Explore Our Story
             </button>
-            <button className="px-8 py-4 bg-transparent border border-white/20 text-white font-semibold tracking-wide rounded-sm hover:bg-white/10 transition-colors duration-300 backdrop-blur-sm">
+            <button type="button" disabled className="px-8 py-4 bg-transparent border border-white/20 text-white/50 font-semibold tracking-wide rounded-sm backdrop-blur-sm cursor-not-allowed">
               View Our Portfolio
             </button>
           </motion.div>

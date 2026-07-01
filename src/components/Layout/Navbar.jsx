@@ -16,11 +16,11 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    { name: 'Services', path: '/services' },
-    { name: 'Blogs', path: '/blogs' },
-    { name: 'Contact', path: '/contact' },
+    { name: 'Home', path: '/', enabled: true },
+    { name: 'About', path: '/about', enabled: true },
+    { name: 'Services', path: '/services', enabled: false },
+    { name: 'Blogs', path: '/blogs', enabled: false },
+    { name: 'Contact', path: '/contact', enabled: false },
   ];
 
   return (
@@ -33,13 +33,19 @@ const Navbar = () => {
           
           <nav className="hidden md:flex gap-8 items-center">
             {navLinks.map((link) => (
-              <Link key={link.name} to={link.path} className="text-sm font-medium text-luxury-silver hover:text-luxury-gold transition-colors">
-                {link.name}
-              </Link>
+              link.enabled ? (
+                <Link key={link.name} to={link.path} className="text-sm font-medium text-luxury-silver hover:text-luxury-gold transition-colors">
+                  {link.name}
+                </Link>
+              ) : (
+                <span key={link.name} className="text-sm font-medium text-luxury-silver/50 cursor-not-allowed" aria-disabled="true">
+                  {link.name}
+                </span>
+              )
             ))}
-            <Link to="/contact" className="px-6 py-2 border border-luxury-gold text-luxury-gold hover:bg-luxury-gold hover:text-luxury-black transition-colors rounded-full text-sm font-medium">
+            <button type="button" disabled className="px-6 py-2 border border-luxury-gold/40 text-luxury-gold/50 rounded-full text-sm font-medium cursor-not-allowed">
               Get a Quote
-            </Link>
+            </button>
           </nav>
 
           <button className="md:hidden text-white" onClick={() => setIsOpen(true)}>
@@ -62,14 +68,20 @@ const Navbar = () => {
             </button>
             <nav className="flex flex-col gap-8 text-center">
               {navLinks.map((link) => (
-                <Link 
-                  key={link.name} 
-                  to={link.path} 
-                  onClick={() => setIsOpen(false)}
-                  className="text-4xl font-display font-medium text-white hover:text-luxury-gold transition-colors"
-                >
-                  {link.name}
-                </Link>
+                link.enabled ? (
+                  <Link 
+                    key={link.name} 
+                    to={link.path} 
+                    onClick={() => setIsOpen(false)}
+                    className="text-4xl font-display font-medium text-white hover:text-luxury-gold transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                ) : (
+                  <span key={link.name} className="text-4xl font-display font-medium text-white/35 cursor-not-allowed" aria-disabled="true">
+                    {link.name}
+                  </span>
+                )
               ))}
             </nav>
           </motion.div>

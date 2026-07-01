@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -106,11 +105,9 @@ const Expertise = () => {
 
         {/* View All Button */}
         <div className="flex justify-center w-full z-20 mb-4">
-          <Link to="/services">
-            <button className="px-8 py-3.5 bg-[#C6A86A] text-[#0A0A0A] font-semibold tracking-widest uppercase text-xs rounded-sm hover:bg-white transition-colors duration-300 shadow-[0_4px_20px_rgba(198,168,106,0.25)]">
-              View All Services
-            </button>
-          </Link>
+          <button type="button" disabled className="px-8 py-3.5 bg-[#C6A86A]/60 text-[#0A0A0A] font-semibold tracking-widest uppercase text-xs rounded-sm shadow-[0_4px_20px_rgba(198,168,106,0.25)] cursor-not-allowed">
+            View All Services
+          </button>
         </div>
       </section>
     </div>

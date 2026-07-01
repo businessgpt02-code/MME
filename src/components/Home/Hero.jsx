@@ -102,10 +102,10 @@ const Hero = () => {
 
           {/* Premium CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-6">
-            <button className="px-8 py-4 bg-luxury-gold text-luxury-black rounded-full font-medium tracking-wide hover:bg-white transition-colors duration-300">
+            <button type="button" disabled className="px-8 py-4 bg-luxury-gold/60 text-luxury-black rounded-full font-medium tracking-wide cursor-not-allowed">
               Book Consultation
             </button>
-            <button className="px-8 py-4 bg-luxury-gold text-luxury-black rounded-full font-medium tracking-wide hover:bg-white transition-colors duration-300">
+            <button type="button" disabled className="px-8 py-4 bg-luxury-gold/60 text-luxury-black rounded-full font-medium tracking-wide cursor-not-allowed">
               Request Proposal
             </button>
           </div>

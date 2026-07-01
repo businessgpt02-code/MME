@@ -17,26 +17,27 @@ const Footer = () => {
           <div>
             <h3 className="text-white font-medium text-lg mb-6 uppercase tracking-wider">Quick Links</h3>
             <ul className="flex flex-col gap-4">
+              <li><Link to="/" className="text-luxury-silver hover:text-luxury-gold transition-colors">Home</Link></li>
               <li><Link to="/about" className="text-luxury-silver hover:text-luxury-gold transition-colors">About Us</Link></li>
-              <li><Link to="/services" className="text-luxury-silver hover:text-luxury-gold transition-colors">Our Services</Link></li>
-              <li><Link to="/blogs" className="text-luxury-silver hover:text-luxury-gold transition-colors">Journal & News</Link></li>
-              <li><Link to="/contact" className="text-luxury-silver hover:text-luxury-gold transition-colors">Contact</Link></li>
+              <li><span className="text-luxury-silver/50 cursor-not-allowed" aria-disabled="true">Our Services</span></li>
+              <li><span className="text-luxury-silver/50 cursor-not-allowed" aria-disabled="true">Journal & News</span></li>
+              <li><span className="text-luxury-silver/50 cursor-not-allowed" aria-disabled="true">Contact</span></li>
             </ul>
           </div>
           <div>
             <h3 className="text-white font-medium text-lg mb-6 uppercase tracking-wider">Contact</h3>
             <ul className="flex flex-col gap-4 text-luxury-silver">
               <li>Dubai, United Arab Emirates</li>
-              <li>info@mmeevents.com</li>
-              <li>+971 50 123 4567</li>
+              <li>info@mmeeventmanagement.com</li>
+              <li>+971 55 735 4031</li>
             </ul>
           </div>
         </div>
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/10 text-sm text-luxury-silver">
           <p>&copy; {new Date().getFullYear()} MME Event Management LLC. All rights reserved.</p>
           <div className="flex gap-6 mt-4 md:mt-0">
-            <Link to="#" className="hover:text-luxury-gold transition-colors">Privacy Policy</Link>
-            <Link to="#" className="hover:text-luxury-gold transition-colors">Terms of Service</Link>
+            <span className="text-luxury-silver/50 cursor-not-allowed" aria-disabled="true">Privacy Policy</span>
+            <span className="text-luxury-silver/50 cursor-not-allowed" aria-disabled="true">Terms of Service</span>
           </div>
         </div>
       </div>

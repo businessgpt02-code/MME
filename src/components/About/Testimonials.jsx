@@ -26,14 +26,6 @@ const testimonials = [
 const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const nextTestimonial = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-  };
-
-  const prevTestimonial = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
-
   return (
     <section className="py-32 bg-[#161616] relative z-10 overflow-hidden">
       
@@ -97,14 +89,16 @@ const Testimonials = () => {
           {/* Navigation */}
           <div className="flex justify-center gap-4 mt-10">
             <button 
-              onClick={prevTestimonial}
-              className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-[#C6A86A] hover:text-[#0A0A0A] hover:border-[#C6A86A] transition-all duration-300"
+              type="button"
+              disabled
+              className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white/50 cursor-not-allowed"
             >
               <ChevronLeft size={20} />
             </button>
             <button 
-              onClick={nextTestimonial}
-              className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-[#C6A86A] hover:text-[#0A0A0A] hover:border-[#C6A86A] transition-all duration-300"
+              type="button"
+              disabled
+              className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white/50 cursor-not-allowed"
             >
               <ChevronRight size={20} />
             </button>

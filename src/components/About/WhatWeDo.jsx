@@ -65,7 +65,7 @@ const WhatWeDo = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <button className="flex items-center gap-2 text-white hover:text-[#C6A86A] transition-colors duration-300 pb-1 border-b border-white/20 hover:border-[#C6A86A]">
+            <button type="button" disabled className="flex items-center gap-2 text-white/50 pb-1 border-b border-white/20 cursor-not-allowed">
               View All Services <ArrowUpRight className="w-4 h-4" />
             </button>
           </motion.div>

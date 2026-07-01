@@ -35,10 +35,10 @@ const AboutCTA = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <button className="w-full sm:w-auto px-10 py-5 bg-[#C6A86A] text-[#0A0A0A] font-semibold tracking-wide rounded-sm hover:bg-white transition-all duration-500 shadow-[0_0_20px_rgba(198,168,106,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)]">
+            <button type="button" disabled className="w-full sm:w-auto px-10 py-5 bg-[#C6A86A]/60 text-[#0A0A0A] font-semibold tracking-wide rounded-sm shadow-[0_0_20px_rgba(198,168,106,0.3)] cursor-not-allowed">
               Request Proposal
             </button>
-            <button className="w-full sm:w-auto px-10 py-5 bg-transparent border border-white/30 text-white font-semibold tracking-wide rounded-sm hover:bg-white/10 transition-colors duration-500 backdrop-blur-sm">
+            <button type="button" disabled className="w-full sm:w-auto px-10 py-5 bg-transparent border border-white/30 text-white/50 font-semibold tracking-wide rounded-sm backdrop-blur-sm cursor-not-allowed">
               Book Consultation
             </button>
           </div>
